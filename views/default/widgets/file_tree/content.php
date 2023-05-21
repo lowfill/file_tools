@@ -15,7 +15,7 @@ if (!is_array($folder_guids)) {
 	$folder_guids = [$folder_guids];
 }
 
-$folder_guids = array_map('sanitise_int', $folder_guids);
+//$folder_guids = array_map('sanitise_int', $folder_guids);
 
 $folder_options = [
 	'type' => 'object',
