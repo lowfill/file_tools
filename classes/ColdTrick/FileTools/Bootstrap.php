@@ -50,7 +50,8 @@ class Bootstrap extends DefaultPluginBootstrap {
 		$hooks = $this->elgg()->hooks;
 
 		$hooks->registerHandler('view_vars', 'resources/file/owner', '\ColdTrick\FileTools\Views::useFolderStructure');
-		$hooks->registerHandler('prepare', 'menu:file_tools_folder_sidebar_tree', '_elgg_setup_vertical_menu');
+		$hooks->registerHandler('view_vars', 'resources/file/group', '\ColdTrick\FileTools\Views::useFolderStructure');
+		//$hooks->registerHandler('prepare', 'menu:file_tools_folder_sidebar_tree', '_elgg_setup_vertical_menu');
 		$hooks->registerHandler('entity:url', 'object', '\ColdTrick\FileTools\Widgets::widgetGetURL');
 // 		$hooks->registerHandler('handlers', 'widgets', '\ColdTrick\FileTools\Widgets::getHandlers');
 		
