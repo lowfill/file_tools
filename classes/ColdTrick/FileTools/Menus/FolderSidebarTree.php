@@ -37,6 +37,7 @@ class FolderSidebarTree {
 			'id' => 'folder-0',
 			'rel' => 'root',
 			'priority' => 0,
+			'prepare_vertical'=>true,
 		]);
 		
 		$folders = elgg_get_entities([
@@ -45,6 +46,7 @@ class FolderSidebarTree {
 			'container_guid' => $container->guid,
 			'limit' => false,
 			'batch' => true,
+			'prepare_vertical'=>true,
 		]);
 		
 		/* @var $folder \ElggObject */
@@ -65,6 +67,7 @@ class FolderSidebarTree {
 				'href' => $folder->getURL(),
 				'priority' => (int) $folder->order,
 				'parent_name' => $parent_name,
+				'prepare_vertical'=>true,
 			]);
 		}
 		
