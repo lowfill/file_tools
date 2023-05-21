@@ -5,7 +5,7 @@ $full_view = (bool) elgg_extract('full_view', $vars, false);
 
 $time_preference = 'date';
 
-if ($user_time_preference = elgg_get_plugin_user_setting('file_tools_time_display', null, 'file_tools')) {
+if ($user_time_preference = elgg_get_plugin_user_setting('file_tools_time_display', elgg_get_logged_in_user_guid(), 'file_tools')) {
 	$time_preference = $user_time_preference;
 } elseif ($site_time_preference = elgg_get_plugin_setting('file_tools_default_time_display', 'file_tools')) {
 	$time_preference = $site_time_preference;
